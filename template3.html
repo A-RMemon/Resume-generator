@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* General container styling */
+        body{
+            background: linear-gradient(135deg, #2980b9, #8e44ad); /* Bold gradient background */
+        }
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 50px;
+    border-radius: 30px;
+    max-width: 1100px;
+    margin: 100px auto;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevents content from overflowing the container */
+}
+
+/* Child div styling (the resume content) */
+.child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-top: 10px solid #3498db; /* Blue accent border on top */
+}
+
+/* Making each paragraph look like a card */
+.child p {
+    font-size: 20px;
+    color: #2c3e50;
+    margin: 18px 0;
+    font-family: 'Lora', serif;
+    border-left: 5px solid #3498db; /* Blue left border for each p */
+    padding-left: 15px;
+    background-color: #f0f8ff; /* Light blue background for each paragraph */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect on paragraphs (cards) */
+.child p:hover {
+    background-color: #d9f0ff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transform: scale(1.02);
+}
+
+/* Firstname Styling */
+.child p#firstname {
+    font-size: 42px;
+    font-weight: 700;
+    color: #8e44ad; /* Purple color for the name */
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b); /* Gradient background for name */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Making the section headings stand out */
+.child p#lastname,
+.child p#city,
+.child p#state,
+.child p#zipcode,
+.child p#phone,
+.child p#email,
+.child p#Qualifications {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2980b9; /* Blue color for section headings */
+    margin-top: 20px;
+}
+
+/* Buttons container with large spacing */
+.buttons {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+/* Button styling with large rounded corners */
+.buttons button {
+    padding: 18px 36px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #3498db; /* Light blue for buttons */
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+}
+
+/* Button hover effects */
+.buttons button:hover {
+    background-color: #2980b9;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Special styling for the "Back" button */
+#mainpage {
+    background-color: #e74c3c; /* Red for Back button */
+}
+
+#mainpage:hover {
+    background-color: #c0392b;
+}
+
+/* Animation for container loading */
+.container {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Keyframe animation for fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Large responsive design for mobile */
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 30px;
+    }
+
+    .child {
+        width: 100%;
+        padding: 25px;
+    }
+    .child p#lastname,
+.child p#city,
+.child p#state,
+.child p#zipcode,
+.child p#phone,
+.child p#email,
+.child p#Qualifications {
+    font-size: 15px;
+    font-weight: 200;
+    color: #2980b9; /* Blue color for section headings */
+    margin-top: 20px;
+}
+
+.child p#firstname{
+    font-size: 13px;
+    font-weight: 200;
+    color: #8e44ad; /* Purple color for the name */
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b); /* Gradient background for name */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+    .buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .buttons button {
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="child">
+            <p id="firstname">hello</p>
+            <p id="lastname">hello</p>
+            <p id="city">hello</p>
+            <p id="state">hello</p>
+            <p id="zipcode">hello</p>
+            <p id="phone">hello</p>
+            <p id="email">hello</p>
+            <p id="Qualifications">hello</p>
+        </div>
+        <div class="buttons">
+            <button id="temp-one">Template-One</button>
+            <button id="temp-two">Template-Two</button>
+            <button id="mainpage">Back</button>
+        </div>
+            </div>
+            <script src="temp3.js"></script>
+            
+</body>
+</html>

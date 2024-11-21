@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* General container styling */
+        body{
+            background: linear-gradient(135deg, #2980b9, #8e44ad); /* Bold gradient background */
+        }
+        .container {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Keyframe animation for fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background: linear-gradient(45deg, #6a11cb, #2575fc);  Beautiful gradient background */
+    /* background-color: #ecf0f1;   */
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 900px;
+    margin: 50px auto;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Child div styling (the resume information) */
+.child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #ffffff; /* White background for content */
+    padding: 25px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 30px;
+    border-left: 6px solid #8e44ad; /* Purple accent on the left */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for each paragraph within the child div */
+.child p {
+    font-size: 18px;
+    color: #2c3e50; /* Dark gray for text */
+    margin: 8px 0;
+}
+
+/* Bold and distinct header for the resume section */
+.child p#firstname {
+    font-size: 28px;
+    font-weight: bold;
+    color: #8e44ad; /* Purple color for the name */
+}
+
+/* Buttons container styling */
+.buttons {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap; /* Allows wrapping in smaller screens */
+}
+
+/* Styling for each button */
+.buttons button {
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #8e44ad; /* Purple button color */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Button hover effects */
+.buttons button:hover {
+    background-color: #9b59b6;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Button for the back action */
+#mainpage {
+    background-color: #e74c3c; /* Red background for "Back" button */
+}
+
+#mainpage:hover {
+    background-color: #c0392b;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    .child {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .buttons button {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .child p#firstname {
+    font-size: 20px;
+    font-weight: bold;
+    color: #8e44ad; /* Purple color for the name */
+}
+
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="child">
+            <p id="firstname">hello</p>
+            <p id="lastname">hello</p>
+            <p id="city">hello</p>
+            <p id="state">hello</p>
+            <p id="zipcode">hello</p>
+            <p id="phone">hello</p>
+            <p id="email">hello</p>
+            <p id="Qualifications">hello</p>
+        </div>
+        <div class="buttons">
+            <button id="temp-one">Template-One</button>
+            <button id="temp-three">Template-Three</button>
+            <button id="mainpage">Back</button>
+        </div>
+            </div>
+            <script src="temp2.js"></script>
+</body>
+</html>

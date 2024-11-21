@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* General container styling */
+        .container {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Keyframe animation for fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.container {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f7f6;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 50px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Child div styling (the resume information) */
+.child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+/* Styling for each paragraph within the child div */
+.child p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Bold and distinct header for the resume section */
+.child p#firstname {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4A90E2;
+}
+
+/* Buttons container styling */
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Styling for each button */
+.buttons button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #4A90E2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover effects */
+.buttons button:hover {
+    background-color: #357ABD;
+    transform: scale(1.05);
+}
+
+/* Button for the back action */
+#mainpage {
+    background-color: #e74c3c;
+}
+
+#mainpage:hover {
+    background-color: #c0392b;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+    .child p#firstname {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4A90E2;
+}
+    .child {
+        width: 100%;
+    }
+    
+    .buttons {
+        flex-direction: column;
+    }
+
+    .buttons button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+<div class="child" >
+    <p id="firstname" style="text-transform: capitalize;">hello</p>
+    <p id="lastname" style="text-transform: capitalize;">hello</p>
+    <p id="city" style="text-transform: capitalize;">hello</p>
+    <p id="state" style="text-transform: capitalize;">hello</p>
+    <p id="zipcode"style="text-transform: capitalize;">hello</p>
+    <p id="phone"style="text-transform: capitalize;">hello</p>
+    <p id="email">hello</p>
+    <p id="Qualifications">hello</p>
+</div>
+<div class="buttons">
+    <button id="temp-two">Template-Two</button>
+    <button id="temp-three">Template-Three</button>
+    <button id="mainpage">Back</button>
+</div>
+    </div>
+    <script src="temp1.js"></script>
+</body>
+</html>

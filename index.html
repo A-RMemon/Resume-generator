@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+     <style>
+        /* General Body and Container Styles */
+body {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);  /* Beautiful gradient background */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeIn 1s ease-out; /* Fade-in animation */
+}
+
+/* Header Style */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Label and Input Field Styles */
+label {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    margin-bottom: 15px;
+    outline: none;
+    transition: transform 0.3s ease;
+}
+
+/* Input Focus Animation */
+input:focus {
+    transform: scale(1.05);
+    border: 2px solid #2575fc;
+}
+
+/* Button Styles */
+button {
+    background-color: #2575fc;
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #6a11cb; /* Hover effect color */
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Buttons container (Template options) */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    label {
+        font-size: 16px;
+    }
+    input {
+        font-size: 14px;
+    }
+    button {
+        font-size: 16px;
+    }
+}
+
+     </style>
+</head>
+
+<body>
+
+<div class="flex">    
+    <div class="container">
+
+        <h1>CV GENERATOR</h1>
+        <label for="firstname">First Name :</label>
+            <input type="text" name="" id="firstname" required autofocus autocomplete="off"/>
+        <label for="lastname">Last Name : </label>
+        <input type="text" id="lastname"required autofocus autocomplete="off">
+        <label for="city">City :</label>
+        <input type="text" id="city"required autofocus autocomplete="off">
+        <label for="state">State :</label>
+        <input type="text" id="state"required autofocus autocomplete="off">
+        <label for="zipcode">Zip Code :</label>
+        <input type="text" id="zipcode" placeholder="Optional" autocomplete="off">
+        <label for="phone">Phone Number :</label>
+        <input type="tel" name="" id="phone" required autofocus autocomplete="off">
+        <label for="email">Email :</label>
+        <input type="email" name="" id="email"required autofocus autocomplete="off">
+        <label for="Qualifications">Qualifications :</label>
+        <input type="text" id="Qualifications"required autofocus autocomplete="off">
+        <!-- <label for="marksheet">Certificate :</label>
+        <input type="text" name="" id="marksheet"> -->
+        <button id="savedata">SUBMIT </button>
+
+    
+    <div class="buttons" style="display: none;">
+        <button value="" id="temp-one">Template-one</button>
+        <button value="" id="temp-two">Template-Two</button>
+        <button value="" id="temp-three">Template-Three</button>
+    </div>
+</div>
+</div>
+
+<script src="app.js"></script>
+</body>
+
+</html>
